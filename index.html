@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Thanaphat Somchai</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .cv-container {
+            width: 800px;
+            background-color: #ffffff;
+            display: flex;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* --- LEFT COLUMN --- */
+        .left-column {
+            width: 35%;
+            background-color: #0b2545;
+            color: #ffffff;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #134074;
+            margin-bottom: 15px;
+        }
+
+        .name {
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .role {
+            font-size: 14px;
+            color: #8da9c4;
+            margin-top: 5px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sidebar-section {
+            width: 100%;
+            margin-bottom: 25px;
+            border-top: 1px solid #134074;
+            padding-top: 15px;
+        }
+
+        .sidebar-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #8da9c4;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .contact-list, .skills-list {
+            list-style: none;
+            font-size: 13px;
+        }
+
+        .contact-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #e0e1dd;
+        }
+
+        .contact-list i {
+            width: 16px;
+            color: #8da9c4;
+        }
+
+        .skills-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+            color: #e0e1dd;
+        }
+
+        .skills-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8da9c4;
+        }
+
+        /* --- RIGHT COLUMN --- */
+        .right-column {
+            width: 65%;
+            padding: 30px 30px;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        .main-section {
+            margin-bottom: 25px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #134074;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .section-header i {
+            background-color: #134074;
+            color: #ffffff;
+            padding: 8px;
+            border-radius: 50%;
+            font-size: 12px;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-title {
+            font-size: 16px;
+            color: #0b2545;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        p.about-text {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #555555;
+        }
+
+        .edu-item {
+            margin-bottom: 15px;
+        }
+
+        .edu-date {
+            font-size: 13px;
+            font-weight: 600;
+            color: #0b2545;
+        }
+
+        .edu-degree {
+            font-size: 13px;
+            font-weight: 600;
+            color: #333333;
+            margin-top: 2px;
+        }
+
+        .edu-school {
+            font-size: 12px;
+            color: #666666;
+        }
+
+        /* Hobbies Grid */
+        .hobbies-grid {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .hobby-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .hobby-item i {
+            font-size: 20px;
+            color: #0b2545;
+        }
+
+        .hobby-item span {
+            font-size: 11px;
+            color: #555555;
+        }
+
+        /* Achievements List */
+        .achievements-list {
+            list-style: none;
+            font-size: 13px;
+        }
+
+        .achievements-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+            color: #555555;
+        }
+
+        .achievements-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #0b2545;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <!-- LEFT SIDEBAR -->
+        <div class="left-column">
+            <!-- Profile Photo -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYi_-pe42u8sIeM1zwejXbV2vFEf1bw3U-pMpLlzLbPC6CD7m2_pL68fff&s=10" alt="Profile Photo" class="profile-img">
+            
+            <!-- Full Name & Title -->
+            <div class="name">Sanhanat<br>Pongsakkajon</div>
+            <div class="role">Student</div>
+
+            <!-- Contact Section -->
+            <div class="sidebar-section">
+                <div class="sidebar-title">Contact</div>
+                <ul class="contact-list">
+                    <li><i class="fa-solid fa-phone"></i> 0951426852</li>
+                    <li><i class="fa-solid fa-envelope"></i> nuttybeam3@email.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Kanchanaburi, Thailand</li>
+                    <li><i class="fa-solid fa-calendar-days"></i> 29 June 2012</li>
+                </ul>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="sidebar-section">
+                <div class="sidebar-title">Skills</div>
+                <ul class="skills-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- RIGHT MAIN CONTENT -->
+        <div class="right-column">
+            <!-- About Me Section -->
+            <div class="main-section">
+                <div class="section-header">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="section-title">About Me</span>
+                </div>
+                <p class="about-text">
+                    I am a hardworking student but i still play game relaxing myself to balance my life
+                </p>
+            </div>
+
+            <!-- Education Section -->
+            <div class="main-section">
+                <div class="section-header">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span class="section-title">Education</span>
+                </div>
+                <div class="edu-item">
+                    <div class="edu-date">2024 – Present</div>
+                    <div class="edu-degree">Grade 7-Grade 8</div>
+                    <div class="edu-school">Vissutharangsri school</div>
+                </div>
+                <div class="edu-item">
+                    <div class="edu-date">2015 – 2024</div>
+                    <div class="edu-degree">Kindergarten-Grade 6</div>
+                    <div class="edu-school">chaijitwitthaya</div>
+                </div>
+            </div>
+
+            <!-- Hobbies Section -->
+            <div class="main-section">
+                <div class="section-header">
+                    <i class="fa-solid fa-star"></i>
+                    <span class="section-title">Hobbies</span>
+                </div>
+                <div class="hobbies-grid">
+                    <div class="hobby-item">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>Reading</span>
+                    </div>
+                    <div class="hobby-item">
+                        <i class="fa-solid fa-futbol"></i>
+                        <span>Playing Football</span>
+                    </div>
+                    <div class="hobby-item">
+                        <i class="fa-solid fa-music"></i>
+                        <span>Listening to Music</span>
+                    </div>
+                    <div class="hobby-item">
+                        <i class="fa-solid fa-camera"></i>
+                        <span>Photography</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements Section -->
+            <div class="main-section">
+                <div class="section-header">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span class="section-title">Achievements</span>
+                </div>
+                <ul class="achievements-list">
+                    <li>Received Student of the Month award (2020)</li>
+                    <li>Winner of School Running Competition (2022)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
